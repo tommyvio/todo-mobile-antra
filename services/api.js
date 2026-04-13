@@ -1,5 +1,10 @@
 // services/api.js — all network calls in one place
 
+// ⚠️  CHANGE THIS to the local IP of the computer running the backend.
+// On Mac: run `ipconfig getifaddr en0` in your terminal to find your IP.
+// On Windows: run `ipconfig` and look for IPv4 Address.
+// Example: 'http://0.0.0.0:3000'
+// Do NOT use localhost — it won't work on a physical phone.
 const BASE_URL = 'http://0.0.0.0:3000';
 
 function authHeaders(token) {

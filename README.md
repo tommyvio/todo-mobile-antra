@@ -14,15 +14,39 @@ The backend must be running before you start the app.
 
 ## How to Run
 
+### Step 1 — Find your computer's local IP
+
+**Mac:**
+```bash
+ipconfig getifaddr en0
+```
+**Windows:**
+```bash
+ipconfig
+# look for "IPv4 Address"
+```
+
+### Step 2 — Set the IP in the mobile app
+
+Open `services/api.js` and update this line with your IP:
+```js
+const BASE_URL = 'http://YOUR_IP_HERE:3000';
+```
+> ⚠️ Do NOT use `localhost` — it won't work on a physical phone.
+
+### Step 3 — Start both servers
+
 **Terminal 1 — Start the backend:**
 ```bash
 cd todo-api-antra
+npm install
 node index.js
 ```
 
 **Terminal 2 — Start the mobile app:**
 ```bash
 cd todo-mobile-antra
+npm install
 npx expo start
 ```
 
