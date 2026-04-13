@@ -22,7 +22,7 @@ node index.js
 
 **Terminal 2 — Start the mobile app:**
 ```bash
-cd todo-mobile
+cd todo-mobile-antra
 npx expo start
 ```
 
